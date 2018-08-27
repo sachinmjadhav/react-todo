@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  margin: 3rem auto;
+  width: 700px;
+}
+.delete {
+  position: relative;
+}
+.delete:hover {
+  cursor: pointer;
+}
+.tooltips {
+  font-size: 0.9rem;
+  position: absolute;
+  top: -120%;
+  right: -130%;
+  z-index: 2;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+}
+.tooltips::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+.delete:hover .tooltips {
+  display: block;
+}
